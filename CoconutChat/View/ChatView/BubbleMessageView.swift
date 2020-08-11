@@ -28,12 +28,12 @@ struct BubbleMessageView: View {
                     ContentMessageView(
                         contentMessage: contentMessage,
                         origin: origin,
-                        color: DataSource.myColor
+                        color: Constants.secondaryColor
                     )
                     
                     TailView(
                         direction: .rightToLeft,
-                        color: DataSource.myColor
+                        color: Constants.secondaryColor
                     )
                 }
             )
@@ -42,13 +42,13 @@ struct BubbleMessageView: View {
                 HStack(alignment: .center, spacing: -7) {
                     TailView(
                         direction: .leftToRight,
-                        color: DataSource.contactColor
+                        color: Constants.primaryColor
                     )
                     
                     ContentMessageView(
                         contentMessage: contentMessage,
                         origin: origin,
-                        color: DataSource.contactColor
+                        color: Constants.primaryColor
                     )
                     
                     Spacer()

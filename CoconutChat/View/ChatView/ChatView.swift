@@ -10,53 +10,72 @@ import SwiftUI
 
 struct ChatView: View {
     @State var typingMessage: String = ""
-    @EnvironmentObject var chatHelper: ChatHelper
+    @ObservedObject var chatHelper: ChatHelper = ChatHelper()
     @ObservedObject private var keyboard = KeyboardResponder()
     
-    init() {
+    private var contact: User
+    
+    init(contact: User) {
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().tableFooterView = UIView()
+        UINavigationBar.appearance().tintColor = Constants.primaryUIColor
+        UITextField.appearance().tintColor = Constants.primaryUIColor
+        
+        self.contact = contact
     }
     
     var body: some View {
-        NavigationView {
+        
+        VStack(alignment: .center, spacing: 0) {
             
-            VStack(alignment: .leading, spacing: 0) {
-                
+            if chatHelper.realTimeMessages.isEmpty {
+                Spacer()
+                Text("Diga Olá\n:D")
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .opacity(0.25)
+                    .multilineTextAlignment(.center)
+                Spacer()
+            } else {
                 List {
-                    ForEach(chatHelper.realTimeMessages, id: \.self) { msg in
+                    ForEach(chatHelper.realTimeMessages.reversed(), id: \.self) { msg in
                         MessageView(checkedMessage: msg).flip()
                     }
-                }.flip()
-                
-                HStack {
-                    TextField("Mensagem...", text: $typingMessage)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(minHeight: CGFloat(30))
-                    Button(action: sendMessage) {
-                        Image(systemName: "message.circle.fill")
-                            .font(.system(size: 32))
-                    }.foregroundColor(DataSource.contactColor)
-                }.frame(minHeight: CGFloat(50)).padding()
-                
-            }.navigationBarTitle(Text(DataSource.contactUser.username.localizedCapitalized), displayMode: .inline)
-                
-                .padding(.bottom, keyboard.currentHeight)
-                .edgesIgnoringSafeArea(keyboard.currentHeight == 0.0 ? .leading: .bottom)
+                }
+                .flip()
+                .onTapGesture {
+                    self.endEditing(true)
+                }
+            }
             
-        }.onTapGesture {
-            self.endEditing(true)
+            HStack {
+                TextField("Mensagem...", text: $typingMessage)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(minHeight: CGFloat(30))
+                    .foregroundColor(Constants.primaryColor)
+                Button(action: sendMessage) {
+                    Image(systemName: "message.circle.fill")
+                        .font(.system(size: 32))
+                }
+                .foregroundColor(Constants.primaryColor)
+            }
+            .frame(minHeight: CGFloat(50)).padding()
+            
         }
+        .navigationBarTitle(Text(contact.username.localizedCapitalized), displayMode: .inline)
+        .padding(.bottom, keyboard.currentHeight)
+        .edgesIgnoringSafeArea(keyboard.currentHeight == 0.0 ? .leading: .bottom)
+        
     }
     
     func sendMessage() {
-        chatHelper.sendMessage(Message(content: typingMessage, user: DataSource.myUser))
+        guard typingMessage.replacingOccurrences(of: " ", with: "") != "" else { return }
+        chatHelper.sendMessage(content: typingMessage, to: contact)
         typingMessage = ""
     }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        ChatView(contact: Constants.Mock.contactUser)
     }
 }

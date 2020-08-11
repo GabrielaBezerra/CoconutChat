@@ -11,4 +11,5 @@ import Foundation
 struct User: Hashable {
     var username: String
     var origin: MessageOrigin
+    var status: UserStatus = .offline
 }

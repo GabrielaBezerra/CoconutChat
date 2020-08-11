@@ -29,7 +29,7 @@ struct MessageView : View {
         case .me:
             return AnyView (
                 HStack {
-                    Text(checkedMessage.user.origin == .me ? "Me" : checkedMessage.user.username.localizedCapitalized)
+                    Text(checkedMessage.user.origin == .me ? "Eu" : checkedMessage.user.username.localizedCapitalized)
                         .font(.caption)
                         .lineLimit(1)
                     
@@ -41,7 +41,7 @@ struct MessageView : View {
             return AnyView (
                 HStack {
                     Spacer().frame(width: 30, height: 0)
-                    Text(checkedMessage.user.origin == .me ? "Me" : checkedMessage.user.username.localizedCapitalized)
+                    Text(checkedMessage.user.origin == .me ? "Eu" : checkedMessage.user.username.localizedCapitalized)
                         .font(.caption)
                         .lineLimit(1)
                 }

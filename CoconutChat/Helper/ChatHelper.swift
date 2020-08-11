@@ -9,11 +9,18 @@
 import Foundation
 import Combine
 
-class ChatHelper : ObservableObject {
+class ChatHelper: ObservableObject {
     var didChange = PassthroughSubject<Void, Never>()
-    @Published var realTimeMessages = DataSource.messages
     
-    func sendMessage(_ chatMessage: Message) {
+    @Published var realTimeMessages: [Message] = []
+    
+    func sendMessage(content: String, to contact: User) {
+        let chatMessage = Message(content: content, user: UserRepository.connectedUser)
+        realTimeMessages.append(chatMessage)
+        didChange.send(())
+    }
+    
+    func receiveMessage(_ chatMessage: Message) {
         realTimeMessages.append(chatMessage)
         didChange.send(())
     }
