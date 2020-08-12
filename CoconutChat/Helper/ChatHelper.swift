@@ -15,7 +15,7 @@ class ChatHelper: ObservableObject {
     @Published var realTimeMessages: [Message] = []
     
     func sendMessage(content: String, to contact: User) {
-        let chatMessage = Message(content: content, user: UserRepository.connectedUser)
+        let chatMessage = Message(content: content, user: UserRepository.singleton.connectedUser!)
         realTimeMessages.append(chatMessage)
         didChange.send(())
     }

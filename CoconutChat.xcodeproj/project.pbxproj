@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,10 @@
 		061B495F24E18944002104D5 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495E24E18943002104D5 /* ChatRepository.swift */; };
 		061B496124E20CCF002104D5 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B496024E20CCF002104D5 /* ContactRepository.swift */; };
 		061B496324E20CEC002104D5 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B496224E20CEC002104D5 /* UserRepository.swift */; };
+		06C60F0B24E44C0300C9A573 /* MiddlewareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C60F0A24E44C0300C9A573 /* MiddlewareManager.swift */; };
+		1FB6ED3D802CB0C87EF7257B /* Pods_CoconutChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB22B249763493605F79654 /* Pods_CoconutChat.framework */; };
+		C7B7A941CA956ACB2905345E /* Pods_CoconutChat_CoconutChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7AC927A17CAFA0DC7965E2 /* Pods_CoconutChat_CoconutChatUITests.framework */; };
+		D7E3471D7B8DD28B933C8769 /* Pods_CoconutChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895E2291D31B34E9F7D53D36 /* Pods_CoconutChatTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05D1D9C06EBE231548631A47 /* Pods-CoconutChat-CoconutChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoconutChat-CoconutChatUITests.release.xcconfig"; path = "Target Support Files/Pods-CoconutChat-CoconutChatUITests/Pods-CoconutChat-CoconutChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		061B490224DF7161002104D5 /* CoconutChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoconutChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		061B490524DF7161002104D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		061B490724DF7161002104D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +92,15 @@
 		061B495E24E18943002104D5 /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		061B496024E20CCF002104D5 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
 		061B496224E20CEC002104D5 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		06C60F0A24E44C0300C9A573 /* MiddlewareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareManager.swift; sourceTree = "<group>"; };
+		7EB22B249763493605F79654 /* Pods_CoconutChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoconutChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F130536CFA5F4F236BBFB5 /* Pods-CoconutChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoconutChatTests.release.xcconfig"; path = "Target Support Files/Pods-CoconutChatTests/Pods-CoconutChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		895E2291D31B34E9F7D53D36 /* Pods_CoconutChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoconutChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AFD14A6A6847BD4C56A0B8F /* Pods-CoconutChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoconutChatTests.debug.xcconfig"; path = "Target Support Files/Pods-CoconutChatTests/Pods-CoconutChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE7AC927A17CAFA0DC7965E2 /* Pods_CoconutChat_CoconutChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoconutChat_CoconutChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE825D2CCB5E12CC6E56F0F9 /* Pods-CoconutChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoconutChat.release.xcconfig"; path = "Target Support Files/Pods-CoconutChat/Pods-CoconutChat.release.xcconfig"; sourceTree = "<group>"; };
+		D028A947F5829579786D16CA /* Pods-CoconutChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoconutChat.debug.xcconfig"; path = "Target Support Files/Pods-CoconutChat/Pods-CoconutChat.debug.xcconfig"; sourceTree = "<group>"; };
+		E960D088A7733D48C6FB6F56 /* Pods-CoconutChat-CoconutChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoconutChat-CoconutChatUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoconutChat-CoconutChatUITests/Pods-CoconutChat-CoconutChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB6ED3D802CB0C87EF7257B /* Pods_CoconutChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E3471D7B8DD28B933C8769 /* Pods_CoconutChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B7A941CA956ACB2905345E /* Pods_CoconutChat_CoconutChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +138,8 @@
 				061B491B24DF7166002104D5 /* CoconutChatTests */,
 				061B492624DF7166002104D5 /* CoconutChatUITests */,
 				061B490324DF7161002104D5 /* Products */,
+				E9169411F42CFABB5AB62828 /* Pods */,
+				E5F799B1715280D558613A53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +156,7 @@
 		061B490424DF7161002104D5 /* CoconutChat */ = {
 			isa = PBXGroup;
 			children = (
+				06C60F0C24E44C0700C9A573 /* Service */,
 				061B495D24E18935002104D5 /* Repository */,
 				061B494C24E03E65002104D5 /* Helper */,
 				061B493924DF72B9002104D5 /* Model */,
@@ -241,6 +261,37 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		06C60F0C24E44C0700C9A573 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				06C60F0A24E44C0300C9A573 /* MiddlewareManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E5F799B1715280D558613A53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EB22B249763493605F79654 /* Pods_CoconutChat.framework */,
+				AE7AC927A17CAFA0DC7965E2 /* Pods_CoconutChat_CoconutChatUITests.framework */,
+				895E2291D31B34E9F7D53D36 /* Pods_CoconutChatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9169411F42CFABB5AB62828 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D028A947F5829579786D16CA /* Pods-CoconutChat.debug.xcconfig */,
+				CE825D2CCB5E12CC6E56F0F9 /* Pods-CoconutChat.release.xcconfig */,
+				E960D088A7733D48C6FB6F56 /* Pods-CoconutChat-CoconutChatUITests.debug.xcconfig */,
+				05D1D9C06EBE231548631A47 /* Pods-CoconutChat-CoconutChatUITests.release.xcconfig */,
+				8AFD14A6A6847BD4C56A0B8F /* Pods-CoconutChatTests.debug.xcconfig */,
+				87F130536CFA5F4F236BBFB5 /* Pods-CoconutChatTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061B492C24DF7166002104D5 /* Build configuration list for PBXNativeTarget "CoconutChat" */;
 			buildPhases = (
+				8B606BFA851E934261555B49 /* [CP] Check Pods Manifest.lock */,
 				061B48FE24DF7161002104D5 /* Sources */,
 				061B48FF24DF7161002104D5 /* Frameworks */,
 				061B490024DF7161002104D5 /* Resources */,
+				D34041ECDEDD94A7EF54A4E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +318,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061B492F24DF7166002104D5 /* Build configuration list for PBXNativeTarget "CoconutChatTests" */;
 			buildPhases = (
+				4768931C2362153853F1E355 /* [CP] Check Pods Manifest.lock */,
 				061B491424DF7166002104D5 /* Sources */,
 				061B491524DF7166002104D5 /* Frameworks */,
 				061B491624DF7166002104D5 /* Resources */,
@@ -283,9 +337,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061B493224DF7166002104D5 /* Build configuration list for PBXNativeTarget "CoconutChatUITests" */;
 			buildPhases = (
+				60B056A0C07D8638448F8D3D /* [CP] Check Pods Manifest.lock */,
 				061B491F24DF7166002104D5 /* Sources */,
 				061B492024DF7166002104D5 /* Frameworks */,
 				061B492124DF7166002104D5 /* Resources */,
+				1A0C0EC711DB45EC24B09525 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -367,6 +423,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A0C0EC711DB45EC24B09525 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoconutChat-CoconutChatUITests/Pods-CoconutChat-CoconutChatUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoconutChat-CoconutChatUITests/Pods-CoconutChat-CoconutChatUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoconutChat-CoconutChatUITests/Pods-CoconutChat-CoconutChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4768931C2362153853F1E355 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoconutChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60B056A0C07D8638448F8D3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoconutChat-CoconutChatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B606BFA851E934261555B49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoconutChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D34041ECDEDD94A7EF54A4E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoconutChat/Pods-CoconutChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoconutChat/Pods-CoconutChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoconutChat/Pods-CoconutChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		061B48FE24DF7161002104D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -385,6 +544,7 @@
 				061B495024E03FDC002104D5 /* View+Extensions.swift in Sources */,
 				061B494924E03D78002104D5 /* ChatHelper.swift in Sources */,
 				061B495F24E18944002104D5 /* ChatRepository.swift in Sources */,
+				06C60F0B24E44C0300C9A573 /* MiddlewareManager.swift in Sources */,
 				061B496124E20CCF002104D5 /* ContactRepository.swift in Sources */,
 				061B495424E0A420002104D5 /* ContactList.swift in Sources */,
 				061B495824E0B5CB002104D5 /* ContactView.swift in Sources */,
@@ -556,6 +716,7 @@
 		};
 		061B492D24DF7166002104D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D028A947F5829579786D16CA /* Pods-CoconutChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +737,7 @@
 		};
 		061B492E24DF7166002104D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE825D2CCB5E12CC6E56F0F9 /* Pods-CoconutChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -596,6 +758,7 @@
 		};
 		061B493024DF7166002104D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AFD14A6A6847BD4C56A0B8F /* Pods-CoconutChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -618,6 +781,7 @@
 		};
 		061B493124DF7166002104D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F130536CFA5F4F236BBFB5 /* Pods-CoconutChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -640,6 +804,7 @@
 		};
 		061B493324DF7166002104D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E960D088A7733D48C6FB6F56 /* Pods-CoconutChat-CoconutChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -660,6 +825,7 @@
 		};
 		061B493424DF7166002104D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D1D9C06EBE231548631A47 /* Pods-CoconutChat-CoconutChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

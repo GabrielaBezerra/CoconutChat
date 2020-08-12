@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,19 +16,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var contactHelper = ContactHelper()
 
+    private var username: String = ""
+    private var subscription: AnyCancellable?
+    
+    lazy var loginAlert: UIAlertController = {
+        let alert = UIAlertController(title: "Olá 🥥", message: "Insira seu nome de usuário", preferredStyle: .alert)
+        // add a textField and create a subscription to update the `text` binding
+        alert.addTextField { [weak self] textField in
+            guard let self = self else { return }
+            self.subscription = NotificationCenter.default
+                .publisher(for: UITextField.textDidChangeNotification, object: textField)
+                .map { ($0.object as? UITextField)?.text ?? "" }
+                .assign(to: \.username, on: self)
+        }
+        
+        // create a `Done` action that updates the `isPresented` binding when tapped
+        // this is just for Demo only but we should really inject
+        // an array of buttons (with their title, style and tap handler)
+        let action = UIAlertAction(title: "Entrar", style: .default) { [weak self] _ in
+            UserRepository.singleton.connect(username: self?.username ?? "")
+        }
+        
+        alert.addAction(action)
+        
+        alert.textFields?.first?.tintColor = Constants.primaryUIColor
+        alert.view.tintColor = Constants.primaryUIColor
+        
+        return alert
+    }()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-        // Create the SwiftUI view that provides the window contents.
-       
-        // Use a UIHostingController as window root view controller.
+        
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            //window.rootViewController = UIHostingController(rootView: ChatView().environmentObject(chatHelper))
             window.rootViewController = UIHostingController(rootView: ContactList().environmentObject(contactHelper))
             self.window = window
+            
             window.makeKeyAndVisible()
         }
     }

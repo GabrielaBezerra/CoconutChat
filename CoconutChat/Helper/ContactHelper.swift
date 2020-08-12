@@ -13,6 +13,18 @@ class ContactHelper: ObservableObject {
     
     var didAddContact = PassthroughSubject<Void, Never>()
     
+    static let mock: ContactHelper = {
+    
+        let helper = ContactHelper()
+        helper.contacts = [
+            User(username: "bruxa71", origin: .contact),
+            User(username: "seu madruga", origin: .contact, status: .online),
+            User(username: "chaves", origin: .contact, status: .online)
+        ]
+        return helper
+        
+    }()
+    
     @Published var contacts: [User] = []
     @Published var alertInputText: String?
     

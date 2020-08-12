@@ -8,12 +8,13 @@
 
 import Foundation
 
-struct UserRepository {
-    private static var currentUser: User?
+class UserRepository: ObservableObject {
     
-    static var connectedUser: User { currentUser! }
+    static let singleton: UserRepository = UserRepository()
     
-    static func connect() {
-        self.currentUser = Constants.Mock.myUser
+    @Published var connectedUser: User?
+    
+    func connect(username: String) {
+        self.connectedUser = User(username: username, origin: .me, status: .online)
     }
 }

@@ -19,9 +19,10 @@ class TextFieldAlertViewController: UIViewController {
     ///   - message: to be used as optional message of the UIAlertController
     ///   - text: binding for the text typed into the UITextField
     ///   - isPresented: binding to be set to false when the alert is dismissed (`Done` button tapped)
-    init(title: String, message: String?, text: Binding<String?>, isPresented: Binding<Bool>?, action: @escaping () -> Void) {
+    init(title: String, message: String?, buttonText: String, text: Binding<String?>, isPresented: Binding<Bool>?, action: @escaping () -> Void) {
         self.alertTitle = title
         self.message = message
+        self.buttonText = buttonText
         self._text = text
         self.isPresented = isPresented
         self.action = action
@@ -35,6 +36,7 @@ class TextFieldAlertViewController: UIViewController {
     // MARK: - Dependencies
     private let alertTitle: String
     private let message: String?
+    private let buttonText: String
     @Binding private var text: String?
     private var isPresented: Binding<Bool>?
     private let action: () -> Void
@@ -65,7 +67,7 @@ class TextFieldAlertViewController: UIViewController {
         // create a `Done` action that updates the `isPresented` binding when tapped
         // this is just for Demo only but we should really inject
         // an array of buttons (with their title, style and tap handler)
-        let action = UIAlertAction(title: "Adicionar", style: .default) { [weak self] _ in
+        let action = UIAlertAction(title: buttonText, style: .default) { [weak self] _ in
             self?.isPresented?.wrappedValue = false
             self?.action()
         }
@@ -85,13 +87,14 @@ struct TextFieldAlert {
     // MARK: Properties
     let title: String
     let message: String?
+    let buttonText: String
     @Binding var text: String?
     var isPresented: Binding<Bool>? = nil
     var action: () -> Void
     
     // MARK: Modifiers
     func dismissable(_ isPresented: Binding<Bool>) -> TextFieldAlert {
-        TextFieldAlert(title: title, message: message, text: $text, isPresented: isPresented, action: action)
+        TextFieldAlert(title: title, message: message, buttonText: buttonText, text: $text, isPresented: isPresented, action: action)
     }
 }
 
@@ -100,7 +103,7 @@ extension TextFieldAlert: UIViewControllerRepresentable {
     typealias UIViewControllerType = TextFieldAlertViewController
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<TextFieldAlert>) -> UIViewControllerType {
-        TextFieldAlertViewController(title: title, message: message, text: $text, isPresented: isPresented, action: action)
+        TextFieldAlertViewController(title: title, message: message, buttonText: buttonText, text: $text, isPresented: isPresented, action: action)
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType,
