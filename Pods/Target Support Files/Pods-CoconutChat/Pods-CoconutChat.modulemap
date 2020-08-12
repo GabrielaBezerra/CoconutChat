@@ -1,6 +1,0 @@
-framework module Pods_CoconutChat {
-  umbrella header "Pods-CoconutChat-umbrella.h"
-
-  export *
-  module * { export * }
-}
