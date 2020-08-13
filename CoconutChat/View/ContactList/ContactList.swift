@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ContactList: View {
     
-    @EnvironmentObject var contactHelper: ContactHelper
+    @EnvironmentObject var contactHelper: ContactRepository
     
     @State var showLoginAlert: Bool
     @State var showAddContactAlert: Bool
@@ -106,12 +106,12 @@ struct ContactList: View {
 
 struct ContactListPopulated_Previews: PreviewProvider {
     static var previews: some View {
-        ContactList().environmentObject(ContactHelper.mock)
+        ContactList().environmentObject(ContactRepository.mock)
     }
 }
 
 struct ContactListEmpty_Previews: PreviewProvider {
     static var previews: some View {
-        ContactList().environmentObject(ContactHelper())
+        ContactList().environmentObject(ContactRepository())
     }
 }

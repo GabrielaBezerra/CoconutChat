@@ -22,12 +22,12 @@ struct Constants {
         static var contactUser = User(username: "john doe", origin: .contact)
         
         static let messages = [
-            Message(content: "Hi, I really love your templates and I would like to buy the chat template", user: Mock.myUser),
-            Message(content: "Thanks, nice to hear that, can I have your email please?", user: Mock.contactUser),
-            Message(content: "😇", user: Mock.myUser),
-            Message(content: "Oh actually, I have just purchased the chat template, so please check your email, you might see my order", user: Mock.myUser),
-            Message(content: "Great, wait me a sec, let me check", user: Mock.contactUser),
-            Message(content: "Sure", user: Mock.myUser)
+            Message(content: "Hi, I really love your templates and I would like to buy the chat template", user: Mock.myUser, timestamp: 0),
+            Message(content: "Thanks, nice to hear that, can I have your email please?", user: Mock.contactUser, timestamp: 1),
+            Message(content: "😇", user: Mock.myUser, timestamp: 2),
+            Message(content: "Oh actually, I have just purchased the chat template, so please check your email, you might see my order", user: Mock.myUser, timestamp: 3),
+            Message(content: "Great, wait me a sec, let me check", user: Mock.contactUser, timestamp: 4),
+            Message(content: "Sure", user: Mock.myUser, timestamp: 5)
         ]
         
     }

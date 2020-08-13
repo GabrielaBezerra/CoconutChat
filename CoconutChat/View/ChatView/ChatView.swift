@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ChatView: View {
     @State var typingMessage: String = ""
-    @ObservedObject var chatHelper: ChatHelper = ChatHelper()
+    @ObservedObject var chatRepository: ChatRepository = ChatRepository.singleton
     @ObservedObject private var keyboard = KeyboardResponder()
     
     private var contact: User
@@ -28,7 +28,7 @@ struct ChatView: View {
         
         VStack(alignment: .center, spacing: 0) {
             
-            if chatHelper.realTimeMessages.isEmpty {
+            if chatRepository.realTimeMessages.isEmpty {
                 Spacer()
                 Text("Diga Olá\n:D")
                     .font(.system(size: 20, weight: .medium, design: .rounded))
@@ -37,7 +37,7 @@ struct ChatView: View {
                 Spacer()
             } else {
                 List {
-                    ForEach(chatHelper.realTimeMessages.reversed(), id: \.self) { msg in
+                    ForEach(chatRepository.realTimeMessages.sorted { $0.timestamp < $1.timestamp }.reversed(), id: \.self) { msg in
                         MessageView(checkedMessage: msg).flip()
                     }
                 }
@@ -61,7 +61,7 @@ struct ChatView: View {
             .frame(minHeight: CGFloat(50)).padding()
             
         }
-        .navigationBarTitle(Text(contact.username.localizedCapitalized), displayMode: .inline)
+        .navigationBarTitle(Text(contact.username), displayMode: .inline)
         .padding(.bottom, keyboard.currentHeight)
         .edgesIgnoringSafeArea(keyboard.currentHeight == 0.0 ? .leading: .bottom)
         
@@ -69,7 +69,7 @@ struct ChatView: View {
     
     func sendMessage() {
         guard typingMessage.replacingOccurrences(of: " ", with: "") != "" else { return }
-        chatHelper.sendMessage(content: typingMessage, to: contact)
+        //chatHelper.sendMessage(content: typingMessage, to: contact)
         typingMessage = ""
     }
 }

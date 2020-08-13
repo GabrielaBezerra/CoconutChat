@@ -22,7 +22,7 @@
 		061B494224E028E1002104D5 /* TailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494124E028E1002104D5 /* TailView.swift */; };
 		061B494424E02A0A002104D5 /* MessageOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494324E02A0A002104D5 /* MessageOrigin.swift */; };
 		061B494624E02BFC002104D5 /* BubbleMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494524E02BFC002104D5 /* BubbleMessageView.swift */; };
-		061B494924E03D78002104D5 /* ChatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494824E03D78002104D5 /* ChatHelper.swift */; };
+		061B494924E03D78002104D5 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494824E03D78002104D5 /* ChatRepository.swift */; };
 		061B494B24E03E58002104D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494A24E03E58002104D5 /* Constants.swift */; };
 		061B494E24E03F4B002104D5 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494D24E03F4B002104D5 /* KeyboardResponder.swift */; };
 		061B495024E03FDC002104D5 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494F24E03FDC002104D5 /* View+Extensions.swift */; };
@@ -30,11 +30,34 @@
 		061B495624E0A89C002104D5 /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495524E0A89C002104D5 /* UserStatus.swift */; };
 		061B495824E0B5CB002104D5 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495724E0B5CB002104D5 /* ContactView.swift */; };
 		061B495A24E15324002104D5 /* TextFieldAlertViewController+TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495924E15324002104D5 /* TextFieldAlertViewController+TextFieldAlert.swift */; };
-		061B495C24E15F9F002104D5 /* ContactHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495B24E15F9F002104D5 /* ContactHelper.swift */; };
-		061B495F24E18944002104D5 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495E24E18943002104D5 /* ChatRepository.swift */; };
-		061B496124E20CCF002104D5 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B496024E20CCF002104D5 /* ContactRepository.swift */; };
+		061B495C24E15F9F002104D5 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495B24E15F9F002104D5 /* ContactRepository.swift */; };
 		061B496324E20CEC002104D5 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B496224E20CEC002104D5 /* UserRepository.swift */; };
 		06C60F0B24E44C0300C9A573 /* MiddlewareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C60F0A24E44C0300C9A573 /* MiddlewareManager.swift */; };
+		06C60F1024E4A9D100C9A573 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B496224E20CEC002104D5 /* UserRepository.swift */; };
+		06C60F1124E4A9D100C9A573 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495B24E15F9F002104D5 /* ContactRepository.swift */; };
+		06C60F1224E4A9D100C9A573 /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B493A24DF74CC002104D5 /* ContentMessageView.swift */; };
+		06C60F1324E4A9D100C9A573 /* BubbleMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494524E02BFC002104D5 /* BubbleMessageView.swift */; };
+		06C60F1424E4A9D100C9A573 /* TextFieldAlertViewController+TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495924E15324002104D5 /* TextFieldAlertViewController+TextFieldAlert.swift */; };
+		06C60F1524E4A9D100C9A573 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B493524DF72AC002104D5 /* User.swift */; };
+		06C60F1624E4A9D100C9A573 /* MessageOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494324E02A0A002104D5 /* MessageOrigin.swift */; };
+		06C60F1724E4A9D100C9A573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B490524DF7161002104D5 /* AppDelegate.swift */; };
+		06C60F1824E4A9D100C9A573 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B493724DF72B4002104D5 /* Message.swift */; };
+		06C60F1924E4A9D100C9A573 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B493E24DF74E5002104D5 /* ChatView.swift */; };
+		06C60F1A24E4A9D100C9A573 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494F24E03FDC002104D5 /* View+Extensions.swift */; };
+		06C60F1B24E4A9D100C9A573 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494824E03D78002104D5 /* ChatRepository.swift */; };
+		06C60F1D24E4A9D100C9A573 /* MiddlewareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C60F0A24E44C0300C9A573 /* MiddlewareManager.swift */; };
+		06C60F1E24E4A9D100C9A573 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495324E0A420002104D5 /* ContactList.swift */; };
+		06C60F1F24E4A9D100C9A573 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495724E0B5CB002104D5 /* ContactView.swift */; };
+		06C60F2024E4A9D100C9A573 /* TailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494124E028E1002104D5 /* TailView.swift */; };
+		06C60F2124E4A9D100C9A573 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494D24E03F4B002104D5 /* KeyboardResponder.swift */; };
+		06C60F2224E4A9D100C9A573 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B494A24E03E58002104D5 /* Constants.swift */; };
+		06C60F2324E4A9D100C9A573 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B490724DF7161002104D5 /* SceneDelegate.swift */; };
+		06C60F2424E4A9D100C9A573 /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B495524E0A89C002104D5 /* UserStatus.swift */; };
+		06C60F2524E4A9D100C9A573 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061B493C24DF74DB002104D5 /* MessageView.swift */; };
+		06C60F2724E4A9D100C9A573 /* Pods_CoconutChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB22B249763493605F79654 /* Pods_CoconutChat.framework */; };
+		06C60F2924E4A9D100C9A573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061B491024DF7166002104D5 /* LaunchScreen.storyboard */; };
+		06C60F2A24E4A9D100C9A573 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 061B490E24DF7166002104D5 /* Preview Assets.xcassets */; };
+		06C60F2B24E4A9D100C9A573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 061B490B24DF7166002104D5 /* Assets.xcassets */; };
 		1FB6ED3D802CB0C87EF7257B /* Pods_CoconutChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB22B249763493605F79654 /* Pods_CoconutChat.framework */; };
 		C7B7A941CA956ACB2905345E /* Pods_CoconutChat_CoconutChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7AC927A17CAFA0DC7965E2 /* Pods_CoconutChat_CoconutChatUITests.framework */; };
 		D7E3471D7B8DD28B933C8769 /* Pods_CoconutChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 895E2291D31B34E9F7D53D36 /* Pods_CoconutChatTests.framework */; };
@@ -80,7 +103,7 @@
 		061B494124E028E1002104D5 /* TailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailView.swift; sourceTree = "<group>"; };
 		061B494324E02A0A002104D5 /* MessageOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOrigin.swift; sourceTree = "<group>"; };
 		061B494524E02BFC002104D5 /* BubbleMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleMessageView.swift; sourceTree = "<group>"; };
-		061B494824E03D78002104D5 /* ChatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHelper.swift; sourceTree = "<group>"; };
+		061B494824E03D78002104D5 /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		061B494A24E03E58002104D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		061B494D24E03F4B002104D5 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		061B494F24E03FDC002104D5 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -88,11 +111,11 @@
 		061B495524E0A89C002104D5 /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 		061B495724E0B5CB002104D5 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		061B495924E15324002104D5 /* TextFieldAlertViewController+TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextFieldAlertViewController+TextFieldAlert.swift"; sourceTree = "<group>"; };
-		061B495B24E15F9F002104D5 /* ContactHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactHelper.swift; sourceTree = "<group>"; };
-		061B495E24E18943002104D5 /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
-		061B496024E20CCF002104D5 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
+		061B495B24E15F9F002104D5 /* ContactRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
 		061B496224E20CEC002104D5 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		06C60F0A24E44C0300C9A573 /* MiddlewareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareManager.swift; sourceTree = "<group>"; };
+		06C60F3024E4A9D100C9A573 /* CoconutChat 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoconutChat 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06C60F3124E4A9D200C9A573 /* CoconutChat copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoconutChat copy-Info.plist"; path = "/Users/gabi/Study/IFCE Projects/PPD/MOM/CoconutChat/CoconutChat copy-Info.plist"; sourceTree = "<absolute>"; };
 		7EB22B249763493605F79654 /* Pods_CoconutChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoconutChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F130536CFA5F4F236BBFB5 /* Pods-CoconutChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoconutChatTests.release.xcconfig"; path = "Target Support Files/Pods-CoconutChatTests/Pods-CoconutChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		895E2291D31B34E9F7D53D36 /* Pods_CoconutChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoconutChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +151,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06C60F2624E4A9D100C9A573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06C60F2724E4A9D100C9A573 /* Pods_CoconutChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -140,6 +171,7 @@
 				061B490324DF7161002104D5 /* Products */,
 				E9169411F42CFABB5AB62828 /* Pods */,
 				E5F799B1715280D558613A53 /* Frameworks */,
+				06C60F3124E4A9D200C9A573 /* CoconutChat copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +181,7 @@
 				061B490224DF7161002104D5 /* CoconutChat.app */,
 				061B491824DF7166002104D5 /* CoconutChatTests.xctest */,
 				061B492324DF7166002104D5 /* CoconutChatUITests.xctest */,
+				06C60F3024E4A9D100C9A573 /* CoconutChat 2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,8 +253,6 @@
 		061B494C24E03E65002104D5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				061B495B24E15F9F002104D5 /* ContactHelper.swift */,
-				061B494824E03D78002104D5 /* ChatHelper.swift */,
 				061B494A24E03E58002104D5 /* Constants.swift */,
 				061B494D24E03F4B002104D5 /* KeyboardResponder.swift */,
 				061B494F24E03FDC002104D5 /* View+Extensions.swift */,
@@ -254,8 +285,8 @@
 		061B495D24E18935002104D5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				061B495E24E18943002104D5 /* ChatRepository.swift */,
-				061B496024E20CCF002104D5 /* ContactRepository.swift */,
+				061B494824E03D78002104D5 /* ChatRepository.swift */,
+				061B495B24E15F9F002104D5 /* ContactRepository.swift */,
 				061B496224E20CEC002104D5 /* UserRepository.swift */,
 			);
 			path = Repository;
@@ -353,6 +384,25 @@
 			productReference = 061B492324DF7166002104D5 /* CoconutChatUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		06C60F0D24E4A9D100C9A573 /* CoconutChat 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06C60F2D24E4A9D100C9A573 /* Build configuration list for PBXNativeTarget "CoconutChat 2" */;
+			buildPhases = (
+				06C60F0E24E4A9D100C9A573 /* [CP] Check Pods Manifest.lock */,
+				06C60F0F24E4A9D100C9A573 /* Sources */,
+				06C60F2624E4A9D100C9A573 /* Frameworks */,
+				06C60F2824E4A9D100C9A573 /* Resources */,
+				06C60F2C24E4A9D100C9A573 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoconutChat 2";
+			productName = CoconutChat;
+			productReference = 06C60F3024E4A9D100C9A573 /* CoconutChat 2.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -392,6 +442,7 @@
 				061B490124DF7161002104D5 /* CoconutChat */,
 				061B491724DF7166002104D5 /* CoconutChatTests */,
 				061B492224DF7166002104D5 /* CoconutChatUITests */,
+				06C60F0D24E4A9D100C9A573 /* CoconutChat 2 */,
 			);
 		};
 /* End PBXProject section */
@@ -421,9 +472,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06C60F2824E4A9D100C9A573 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06C60F2924E4A9D100C9A573 /* LaunchScreen.storyboard in Resources */,
+				06C60F2A24E4A9D100C9A573 /* Preview Assets.xcassets in Resources */,
+				06C60F2B24E4A9D100C9A573 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		06C60F0E24E4A9D100C9A573 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoconutChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		06C60F2C24E4A9D100C9A573 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoconutChat/Pods-CoconutChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoconutChat/Pods-CoconutChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoconutChat/Pods-CoconutChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1A0C0EC711DB45EC24B09525 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -532,7 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				061B496324E20CEC002104D5 /* UserRepository.swift in Sources */,
-				061B495C24E15F9F002104D5 /* ContactHelper.swift in Sources */,
+				061B495C24E15F9F002104D5 /* ContactRepository.swift in Sources */,
 				061B493B24DF74CC002104D5 /* ContentMessageView.swift in Sources */,
 				061B494624E02BFC002104D5 /* BubbleMessageView.swift in Sources */,
 				061B495A24E15324002104D5 /* TextFieldAlertViewController+TextFieldAlert.swift in Sources */,
@@ -542,10 +642,8 @@
 				061B493824DF72B4002104D5 /* Message.swift in Sources */,
 				061B493F24DF74E5002104D5 /* ChatView.swift in Sources */,
 				061B495024E03FDC002104D5 /* View+Extensions.swift in Sources */,
-				061B494924E03D78002104D5 /* ChatHelper.swift in Sources */,
-				061B495F24E18944002104D5 /* ChatRepository.swift in Sources */,
+				061B494924E03D78002104D5 /* ChatRepository.swift in Sources */,
 				06C60F0B24E44C0300C9A573 /* MiddlewareManager.swift in Sources */,
-				061B496124E20CCF002104D5 /* ContactRepository.swift in Sources */,
 				061B495424E0A420002104D5 /* ContactList.swift in Sources */,
 				061B495824E0B5CB002104D5 /* ContactView.swift in Sources */,
 				061B494224E028E1002104D5 /* TailView.swift in Sources */,
@@ -570,6 +668,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				061B492824DF7166002104D5 /* CoconutChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06C60F0F24E4A9D100C9A573 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06C60F1024E4A9D100C9A573 /* UserRepository.swift in Sources */,
+				06C60F1124E4A9D100C9A573 /* ContactRepository.swift in Sources */,
+				06C60F1224E4A9D100C9A573 /* ContentMessageView.swift in Sources */,
+				06C60F1324E4A9D100C9A573 /* BubbleMessageView.swift in Sources */,
+				06C60F1424E4A9D100C9A573 /* TextFieldAlertViewController+TextFieldAlert.swift in Sources */,
+				06C60F1524E4A9D100C9A573 /* User.swift in Sources */,
+				06C60F1624E4A9D100C9A573 /* MessageOrigin.swift in Sources */,
+				06C60F1724E4A9D100C9A573 /* AppDelegate.swift in Sources */,
+				06C60F1824E4A9D100C9A573 /* Message.swift in Sources */,
+				06C60F1924E4A9D100C9A573 /* ChatView.swift in Sources */,
+				06C60F1A24E4A9D100C9A573 /* View+Extensions.swift in Sources */,
+				06C60F1B24E4A9D100C9A573 /* ChatRepository.swift in Sources */,
+				06C60F1D24E4A9D100C9A573 /* MiddlewareManager.swift in Sources */,
+				06C60F1E24E4A9D100C9A573 /* ContactList.swift in Sources */,
+				06C60F1F24E4A9D100C9A573 /* ContactView.swift in Sources */,
+				06C60F2024E4A9D100C9A573 /* TailView.swift in Sources */,
+				06C60F2124E4A9D100C9A573 /* KeyboardResponder.swift in Sources */,
+				06C60F2224E4A9D100C9A573 /* Constants.swift in Sources */,
+				06C60F2324E4A9D100C9A573 /* SceneDelegate.swift in Sources */,
+				06C60F2424E4A9D100C9A573 /* UserStatus.swift in Sources */,
+				06C60F2524E4A9D100C9A573 /* MessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +970,48 @@
 			};
 			name = Release;
 		};
+		06C60F2E24E4A9D100C9A573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D028A947F5829579786D16CA /* Pods-CoconutChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CoconutChat/Preview Content\"";
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CoconutChat copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharkberry.CoconutChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06C60F2F24E4A9D100C9A573 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE825D2CCB5E12CC6E56F0F9 /* Pods-CoconutChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CoconutChat/Preview Content\"";
+				DEVELOPMENT_TEAM = 526YR6WHWC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CoconutChat copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharkberry.CoconutChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -879,6 +1047,15 @@
 			buildConfigurations = (
 				061B493324DF7166002104D5 /* Debug */,
 				061B493424DF7166002104D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06C60F2D24E4A9D100C9A573 /* Build configuration list for PBXNativeTarget "CoconutChat 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06C60F2E24E4A9D100C9A573 /* Debug */,
+				06C60F2F24E4A9D100C9A573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

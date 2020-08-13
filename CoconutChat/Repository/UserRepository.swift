@@ -16,5 +16,7 @@ class UserRepository: ObservableObject {
     
     func connect(username: String) {
         self.connectedUser = User(username: username, origin: .me, status: .online)
+        
+        MiddlewareManager.singleton.connect()
     }
 }

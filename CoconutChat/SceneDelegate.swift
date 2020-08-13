@@ -14,42 +14,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    var contactHelper = ContactHelper()
-
-    private var username: String = ""
-    private var subscription: AnyCancellable?
-    
-    lazy var loginAlert: UIAlertController = {
-        let alert = UIAlertController(title: "Olá 🥥", message: "Insira seu nome de usuário", preferredStyle: .alert)
-        // add a textField and create a subscription to update the `text` binding
-        alert.addTextField { [weak self] textField in
-            guard let self = self else { return }
-            self.subscription = NotificationCenter.default
-                .publisher(for: UITextField.textDidChangeNotification, object: textField)
-                .map { ($0.object as? UITextField)?.text ?? "" }
-                .assign(to: \.username, on: self)
-        }
-        
-        // create a `Done` action that updates the `isPresented` binding when tapped
-        // this is just for Demo only but we should really inject
-        // an array of buttons (with their title, style and tap handler)
-        let action = UIAlertAction(title: "Entrar", style: .default) { [weak self] _ in
-            UserRepository.singleton.connect(username: self?.username ?? "")
-        }
-        
-        alert.addAction(action)
-        
-        alert.textFields?.first?.tintColor = Constants.primaryUIColor
-        alert.view.tintColor = Constants.primaryUIColor
-        
-        return alert
-    }()
+    var contactRepository = ContactRepository.singleton
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: ContactList().environmentObject(contactHelper))
+            window.rootViewController = UIHostingController(rootView: ContactList().environmentObject(contactRepository))
             self.window = window
             
             window.makeKeyAndVisible()
